@@ -1,0 +1,13 @@
+partial alphanumeric_keys
+xkb_symbols "muhenkan" {
+    key.type = "MUHENKAN";
+    key <MUHE> { [ Home, Home, End ] };
+};
+
+partial alphanumeric_keys
+xkb_symbols "mykeymap" {
+    key <HENK> { [ Shift_L ] };
+    modifier_map Shift { <HENK> };
+    replace key <HKTG> { [ Control_L ] };
+    modifier_map Control { <HKTG> };
+};
