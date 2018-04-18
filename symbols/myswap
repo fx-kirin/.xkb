@@ -7,8 +7,8 @@ xkb_symbols "muhenkan" {
     replace key <LALT> { [ Hyper_R ] };
     modifier_map Mod3 { <LALT> };
     key.type = "ONE_LEVEL";
-    replace key <LCTL> { [ Alt_L ] };
-    modifier_map Mod1 { <LCTL> };
+    replace key <RCTL> { [ Alt_L ] };
+    modifier_map Mod1 { <RCTL> };
 };
 
 partial alphanumeric_keys
