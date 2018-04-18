@@ -1,0 +1,3 @@
+xkb_compatibility "super"{
+    interpret Super_L { action = SetMods(modifiers=Mod3); };
+}
