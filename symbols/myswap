@@ -2,7 +2,11 @@ partial alphanumeric_keys
 xkb_symbols "muhenkan" {
     key.type = "ONE_LEVEL";
     replace key <MUHE> { [ Hyper_L ] };
-    modifier_map Mod2 { <MUHE> };
+    modifier_map Mod5 { <MUHE> };
+};
+
+partial alphanumeric_keys
+xkb_symbols "althyper" {
     key.type = "ONE_LEVEL";
     replace key <LALT> { [ Hyper_R ] };
     modifier_map Mod3 { <LALT> };
@@ -18,6 +22,7 @@ xkb_symbols "hypermeta" {
     key <AC07> { [ j, J, Down, Next ] };
     key <AC08> { [ k, K, Up, Prior ] };
     key <AC09> { [ l, L, Right, End ] };
+    key <SPCE> { [ space, space, BackSpace, space ] };
 };
 
 partial alphanumeric_keys
