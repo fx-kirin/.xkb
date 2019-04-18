@@ -1,15 +1,15 @@
 partial alphanumeric_keys
 xkb_symbols "muhenkan" {
     key.type = "ONE_LEVEL";
-    replace key <MUHE> { [ Hyper_L ] };
-    modifier_map Mod5 { <MUHE> };
+    replace key <MUHE> { [ Control_L ] };
+    modifier_map Control { <MUHE> };
 };
 
 partial alphanumeric_keys
 xkb_symbols "althyper" {
     key.type = "ONE_LEVEL";
-    replace key <LALT> { [ Hyper_R ] };
-    modifier_map Mod3 { <LALT> };
+    replace key <LALT> { [ Hyper_L ] };
+    modifier_map Mod5 { <LALT> };
     key.type = "ONE_LEVEL";
     replace key <RCTL> { [ Alt_L ] };
     modifier_map Mod1 { <RCTL> };
@@ -29,6 +29,6 @@ partial alphanumeric_keys
 xkb_symbols "mykeymap" {
     key <HENK> { [ Shift_L ] };
     modifier_map Shift { <HENK> };
-    replace key <HKTG> { [ Control_L ] };
-    modifier_map Control { <HKTG> };
+    replace key <HKTG> { [ Hyper_R ] };
+    modifier_map Mod3 { <HKTG> };
 };
