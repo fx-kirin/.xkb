@@ -18,6 +18,7 @@ xkb_symbols "althyper" {
 partial alphanumeric_keys
 xkb_symbols "hypermeta" {
     key.type = "MY_THREE_LEVEL";
+    key <AC04> { [ f, F, Return, Return ] };
     key <AC06> { [ h, H, Left, Home ] };
     key <AC07> { [ j, J, Down, Next ] };
     key <AC08> { [ k, K, Up, Prior ] };
