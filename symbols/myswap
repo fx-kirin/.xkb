@@ -22,10 +22,10 @@ partial alphanumeric_keys
 xkb_symbols "hypermeta" {
     key.type = "MY_THREE_LEVEL";
     key <AC04> { [ f, F, Return, Return ], overlay1 = <RTRN>};
-    key <AC06> { [ h, H, Left, Home ], overlay1=<LEFT>};
-    key <AC07> { [ j, J, Down, Next ], overlay1=<DOWN>};
-    key <AC08> { [ k, K, Up, Prior ], overlay1=<UP>};
-    key <AC09> { [ l, L, Right, End ], overlay1=<RGHT>};
+    key <AC06> { [ h, H, Home, Home], overlay1=<LEFT>};
+    key <AC07> { [ j, J, Next, Next ], overlay1=<DOWN>};
+    key <AC08> { [ k, K, Prior, Prior ], overlay1=<UP>};
+    key <AC09> { [ l, L, End, End ], overlay1=<RGHT>};
     key <SPCE> { [ space, space, BackSpace, space ], overlay1=<BKSP>};
 };
 
