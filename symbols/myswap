@@ -34,8 +34,8 @@ partial alphanumeric_keys
 xkb_symbols "right_little_finger" {
     key.type = "TWO_LEVEL";
     key <AC10> { [ colon, slash ] };
-    key <AC11> { [ quotedbl, question ] };
-    key <AB10> { [ semicolon, apostrophe ] };
+    key <AC11> { [ quotedbl, apostrophe ] };
+    key <AB10> { [ semicolon,  question] };
 };
 
 partial alphanumeric_keys
