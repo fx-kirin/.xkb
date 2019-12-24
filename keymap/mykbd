@@ -2,6 +2,6 @@ xkb_keymap {
 	xkb_keycodes  { include "evdev+aliases(qwerty)"	};
 	xkb_types     { include "complete+mytypes(muhenkan)"	};
 	xkb_compat    { include "complete+mycompat(super)"	};
-	xkb_symbols   { include "pc+us+inet(evdev)+myswap(mykeymap)+myswap(muhenkan)+myswap(hypermeta)"};
+	xkb_symbols   { include "pc+us+inet(evdev)+myswap(mykeymap)+myswap(muhenkan)+myswap(hypermeta)+myswap(right_little_finger)"};
 	xkb_geometry  { include "pc(pc102)"	};
 };
