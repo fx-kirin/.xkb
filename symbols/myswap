@@ -33,9 +33,11 @@ xkb_symbols "hypermeta" {
 partial alphanumeric_keys
 xkb_symbols "right_little_finger" {
     key.type = "TWO_LEVEL";
-    key <AC10> { [ colon, slash ] };
-    key <AC11> { [ quotedbl, apostrophe ] };
+    key <AC10> { [ colon, bracketleft ] };
+    key <AC11> { [ slash, bracketright ] };
     key <AB10> { [ semicolon,  question] };
+    key <AD11> { [ quotedbl, braceleft ] };
+    key <AD12> { [ apostrophe, braceright ] };
 };
 
 partial alphanumeric_keys
