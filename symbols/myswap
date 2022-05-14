@@ -1,7 +1,9 @@
 partial alphanumeric_keys
 xkb_symbols "muhenkan" {
-    key.type = "ONE_LEVEL";
-    replace key <MUHE> { [ Control_L ] };
+    key <MUHE> {
+        type= "ONE_LEVEL",
+        symbols[Group1]= [ Control_L ]
+    };
     modifier_map Control { <MUHE> };
 };
 
@@ -9,24 +11,39 @@ partial alphanumeric_keys
 xkb_symbols "althyper" {
     key <LALT> {
         type[Group1] = "ONE_LEVEL",
-        symbols[Group1] = [ Overlay1_Enable ]
+        symbols[Group1] = [ Hyper_L ]
     };
-    key.type = "ONE_LEVEL";
     modifier_map Mod5 { <LALT> };
-    key.type = "ONE_LEVEL";
-    replace key <RCTL> { [ Alt_L ] };
+    key <RCTL> {
+        type= "ONE_LEVEL",
+        symbols[Group1]= [ Alt_L ]
+    };
     modifier_map Mod1 { <RCTL> };
+    key <CAPS> {
+        type[Group1] = "MY_THREE_LEVEL",
+        [F13, Caps_Lock, Caps_Lock, Caps_Lock] 
+    };
+    modifier_map Mod2 { <CAPS> };
+};
+
+partial alphanumeric_keys
+xkb_symbols "shiftcaps" {
+    key <CAPS> {
+        type[Group1] = "MY_THREE_LEVEL",
+        [F13, Caps_Lock, Caps_Lock, Caps_Lock] 
+    };
+    modifier_map Mod2 { <CAPS> };
 };
 
 partial alphanumeric_keys
 xkb_symbols "hypermeta" {
     key.type = "MY_THREE_LEVEL";
-    key <AC04> { [ f, F, Return, Return ], overlay1 = <RTRN>};
-    key <AC06> { [ h, H, Home, Home], overlay1=<LEFT>};
-    key <AC07> { [ j, J, Next, Next ], overlay1=<DOWN>};
-    key <AC08> { [ k, K, Prior, Prior ], overlay1=<UP>};
-    key <AC09> { [ l, L, End, End ], overlay1=<RGHT>};
-    key <SPCE> { [ space, space, BackSpace, space ], overlay1=<BKSP>};
+    key <AC04> { [ f, F, Return, Return]};
+    key <AC06> { [ h, H, Left, Home]};
+    key <AC07> { [ j, J, Down, Next]};
+    key <AC08> { [ k, K, Up, Prior]};
+    key <AC09> { [ l, L, Right, End ]};
+    key <SPCE> { [ space, space, BackSpace, space ]};
 };
 
 
@@ -34,16 +51,26 @@ partial alphanumeric_keys
 xkb_symbols "right_little_finger" {
     key.type = "TWO_LEVEL";
     key <AC10> { [ colon, bracketleft ] };
-    key <AC11> { [ slash, bracketright ] };
-    key <AB10> { [ semicolon,  question] };
+    key <AC11> { [ semicolon, bracketright ] };
+    key <AB10> { [ slash,  question] };
     key <AD11> { [ quotedbl, braceleft ] };
     key <AD12> { [ apostrophe, braceright ] };
 };
 
 partial alphanumeric_keys
-xkb_symbols "mykeymap" {
+xkb_symbols "henk_hktg" {
     key <HENK> { [ Shift_L ] };
     modifier_map Shift { <HENK> };
-    replace key <HKTG> { [ Hyper_R ] };
+    key <HKTG> { [ Hyper_R ] };
     modifier_map Mod3 { <HKTG> };
+};
+
+
+partial alphanumeric_keys
+xkb_symbols "mykeymap" {
+    include "myswap(henk_hktg)"
+    include "myswap(right_little_finger)"
+    include "myswap(hypermeta)"
+    include "myswap(muhenkan)"
+    include "myswap(shiftcaps)"
 };
